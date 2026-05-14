@@ -178,7 +178,7 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v5
         with:
-          path: ../Dockerfile
+          path: ./Dockerfile
           context: ./back
           push: true
           tags: ghcr.io/${{ github.repository }}/backend:latest
@@ -214,7 +214,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
         with:
-          path: ../Dockerfile
+          path: ./Dockerfile
           context: ./front
           push: true
           tags: ghcr.io/${{ github.repository }}/frontend:latest

@@ -30,7 +30,7 @@ RUN chmod +x gradlew
 
 RUN ./gradlew dependencies --no-daemon || true
 
-COPY back/ .
+#COPY back/
 
 RUN ./gradlew build -x test --no-daemon
 

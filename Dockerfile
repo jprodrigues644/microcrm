@@ -83,8 +83,7 @@ COPY --from=front /app/Caddyfile ./Caddyfile
 
 COPY --from=back /app/app.jar ./app.jar
 
-COPY misc/docker/supervisor.ini ./supervisor.ini
+
 
 EXPOSE 80 443 8080
 
-CMD ["/usr/bin/supervisord", "-c", "/app/supervisor.ini"]
